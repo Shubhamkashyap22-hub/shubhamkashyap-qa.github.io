@@ -1087,6 +1087,11 @@ nav a:hover {
     }
 
 }
+        #page-loader.loader-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
     </style>
 </head>
 
@@ -1744,16 +1749,19 @@ document.addEventListener("DOMContentLoaded", function () {
     typeText();
 
 });
-        <script>
-window.addEventListener("load", function () {
+      <script>
+document.addEventListener("DOMContentLoaded", function () {
 
     const loader = document.getElementById("page-loader");
 
-    setTimeout(function () {
-        loader.classList.add("loader-hidden");
-    }, 800);
+    if (loader) {
+        setTimeout(function () {
+            loader.classList.add("loader-hidden");
+        }, 1000);
+    }
 
 });
+</script>
 </script>
 </script>
 </body>
