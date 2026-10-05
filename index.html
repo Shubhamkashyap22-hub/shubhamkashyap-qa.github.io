@@ -1422,6 +1422,43 @@ h4 {
 .hero-content h1 span {
     color: #0077cc;
 }
+        /* =========================================
+   EXPERIENCE / EDUCATION / CONTACT
+   HOVER ANIMATION
+========================================= */
+
+.experience-card,
+.education-card,
+.contact-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Hover Effect */
+
+.experience-card:hover,
+.education-card:hover,
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Heading Animation */
+
+.experience-card h3,
+.education-card h3,
+.contact-card h3 {
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover h3,
+.education-card:hover h3,
+.contact-card:hover h3 {
+    transform: translateX(5px);
+}
     </style>
 </head>
 
