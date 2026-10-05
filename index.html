@@ -1,0 +1,621 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shubham Kashyap - QA Engineer Portfolio">
+    <title>Shubham Kashyap | QA Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            padding: 16px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* Home */
+        .home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #eef4ff, #ffffff);
+            gap: 50px;
+        }
+
+        .home-content {
+            max-width: 650px;
+        }
+
+        .home-content h1 {
+            font-size: 52px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .home-content h2 {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-outline:hover {
+            color: white;
+        }
+
+        .profile-box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: #dbeafe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 7px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Common Sections */
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+        }
+
+        /* About */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+            color: #4b5563;
+        }
+
+        /* Skills */
+        .skills-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        /* Experience */
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .job {
+            background: #f8fafc;
+            border-left: 5px solid #2563eb;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+
+        .job h3 {
+            color: #111827;
+            font-size: 21px;
+        }
+
+        .job h4 {
+            color: #2563eb;
+            margin: 5px 0;
+        }
+
+        .job span {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Projects */
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #6b7280;
+        }
+
+        /* Education */
+        .education {
+            background: white;
+        }
+
+        .education-card {
+            max-width: 800px;
+            margin: 15px auto;
+            padding: 22px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 5px solid #2563eb;
+        }
+
+        .education-card h3 {
+            color: #111827;
+        }
+
+        .education-card span {
+            color: #2563eb;
+        }
+
+        /* Contact */
+        .contact-container {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-container p {
+            margin: 12px 0;
+            font-size: 17px;
+        }
+
+        .contact-container a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .home-content h1 {
+                font-size: 38px;
+            }
+
+            .home-content h2 {
+                font-size: 23px;
+            }
+
+            .profile-box {
+                width: 220px;
+                height: 220px;
+            }
+
+            .skills-container,
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Shubham Kashyap</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h1>Hi, I'm Shubham Kashyap</h1>
+
+            <h2>QA Engineer | Manual & API Testing</h2>
+
+            <p>
+                QA Engineer with hands-on experience in Manual Testing,
+                Functional Testing, Regression Testing, Retesting,
+                UI Testing, Cross-Browser Testing and API Testing.
+            </p>
+
+            <a href="#projects" class="btn">View Projects</a>
+
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <div class="profile-box">
+            <img src="profile.jpg" alt="Shubham Kashyap">
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <div class="about-content">
+            <p>
+                I am a QA Engineer focused on delivering reliable and
+                high-quality software through systematic testing.
+                I have experience working on real-world web and mobile
+                applications and have worked across functional,
+                regression, retesting, UI and API testing.
+            </p>
+
+            <br>
+
+            <p>
+                My testing experience includes SaaS platforms,
+                School Management Systems, Learning Management Systems,
+                Inventory Management Systems, POS systems, Restaurant
+                applications and other business applications.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>Manual Testing</h3>
+                <p>Functional, Regression, Retesting, Smoke & Sanity Testing</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>API Testing</h3>
+                <p>Postman, REST APIs, Status Codes, Authentication & Validation</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>UI Testing</h3>
+                <p>UI Validation, Usability Testing & Cross-Browser Testing</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Security Testing</h3>
+                <p>Authentication, Authorization, RBAC & API Security Testing</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Bug Reporting</h3>
+                <p>Clear bug descriptions, severity, priority & reproduction steps</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Jira, Postman, Fiddler, GitHub & Browser DevTools</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience">
+
+        <h2 class="section-title">Work <span>Experience</span></h2>
+
+        <div class="timeline">
+
+            <div class="job">
+                <h3>QA Engineer</h3>
+                <h4>Kasper Infotech</h4>
+                <span>2025 – Present</span>
+
+                <p>
+                    Working on Manual and API Testing of real-world
+                    web and mobile applications. Responsible for
+                    functional testing, regression testing, retesting,
+                    API validation, RBAC testing and bug reporting.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Android Developer Trainee</h3>
+                <h4>DAMS</h4>
+                <span>July 2025 – December 2025</span>
+
+                <p>
+                    Worked on Android application development and
+                    gained practical experience in mobile application
+                    development and testing.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="section-title">Real-World <span>Projects</span></h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>SMS – School Management System</h3>
+                <p>
+                    SaaS-based school management platform covering
+                    Admin, Teacher, Student, Driver, Attendance,
+                    Fees, Exam, Transport, Reports, RBAC, API and Security.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>LMS – Learning Management System</h3>
+                <p>
+                    Tested multi-tenant SaaS LMS including role-based
+                    access, functional modules, regression testing,
+                    API testing and security validation.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>IMS – Inventory Management System</h3>
+                <p>
+                    Tested inventory workflows, user roles,
+                    permissions, APIs, company management and
+                    business validations.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>POS – Point of Sale</h3>
+                <p>
+                    Tested POS sales, returns, payments, cash drawer,
+                    discounts, inventory integration, customer flows
+                    and API security.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Restaurant Management System</h3>
+                <p>
+                    Tested reservations, orders, payments, waiter
+                    management, cash drawer, gift cards and restaurant
+                    workflows.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Janta Sewa App</h3>
+                <p>
+                    Performed functional and UI testing for a real-world
+                    mobile application with focus on user workflows
+                    and application reliability.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Drivya RO Application</h3>
+                <p>
+                    Tested mobile application workflows related to
+                    RO services, users and application functionality.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Education -->
+    <section class="education" id="education">
+
+        <h2 class="section-title">My <span>Education</span></h2>
+
+        <div class="education-card">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>Currently Pursuing – Online Mode</p>
+        </div>
+
+        <div class="education-card">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p><span>2022 – 2025</span></p>
+        </div>
+
+        <div class="education-card">
+            <h3>Intermediate</h3>
+            <p><span>2022</span></p>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">Contact <span>Me</span></h2>
+
+        <div class="contact-container">
+
+            <p>
+                📧 Email:
+                <a href="mailto:shubhamkashyap54321@gmail.com">
+                    shubhamkashyap54321@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱 Phone:
+                <a href="tel:+917351400389">
+                    +91 73514 00389
+                </a>
+            </p>
+
+            <p>📍 Noida, Uttar Pradesh, India</p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Shubham Kashyap. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
