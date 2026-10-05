@@ -667,6 +667,92 @@
     text-decoration: none;
     font-weight: 600;
 }
+        #home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.hero-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+    #home {
+        padding: 60px 20px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .hero-buttons,
+    .social-links {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 
@@ -688,10 +774,11 @@
     </nav>
 
     <!-- Home -->
-  <section id="home">
+<section id="home">
 
     <div class="hero-container">
 
+        <!-- Left Content -->
         <div class="hero-content">
 
             <p class="hero-greeting">Hello, I'm</p>
@@ -712,32 +799,51 @@
                 Restaurant Management and other business applications.
             </p>
 
-         <div class="hero-buttons">
+            <!-- Main Buttons -->
+            <div class="hero-buttons">
 
-    <a href="#projects" class="primary-btn">
-        View Projects
-    </a>
+                <a href="#projects" class="primary-btn">
+                    View Projects
+                </a>
 
-    <a href="resume.pdf" download class="secondary-btn">
-        Download CV
-    </a>
+                <a href="resume.pdf" download class="secondary-btn">
+                    Download CV
+                </a>
 
-    <a href="#contact" class="secondary-btn">
-        Contact Me
-    </a>
- <a href="https://www.linkedin.com/in/shubham-kashyap-a3a35531a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="secondary-btn">
-LinkedIn    </a>
+                <a href="#contact" class="secondary-btn">
+                    Contact Me
+                </a>
 
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+
+                <a href="https://www.linkedin.com/in/shubham-kashyap-a3a35531a/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/Shubhamkashyap22-hub"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+            </div>
 
         </div>
 
+
+        <!-- Right Profile Image -->
         <div class="hero-image">
 
             <img src="profile.jpg"
                  alt="Shubham Kashyap - QA Engineer">
 
         </div>
-        </div>
+
     </div>
 
 </section>
