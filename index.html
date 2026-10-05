@@ -503,96 +503,166 @@
            EXPERIENCE
         ========================================= */
 
-        #experience {
-            background:
-                linear-gradient(
-                    180deg,
-                    rgba(255,255,255,0.5),
-                    rgba(239,246,255,0.65)
-                );
-        }
+/* =========================
+   WORK EXPERIENCE
+========================= */
 
-        .experience-container {
-            max-width: 950px;
+.experience-container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
-            margin: auto;
-        }
+.experience-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 32px 35px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 
-        .experience-card {
-            background: white;
+  width: 100%;
+  box-sizing: border-box;
 
-            padding: 30px;
+  position: relative;
+  overflow: hidden;
 
-            margin-bottom: 25px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
 
-            border-left: 5px solid #2563eb;
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+  border-color: #2563eb;
+}
 
-            border-radius: 10px;
+/* Company Name */
+.experience-card h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #0f172a;
 
-            box-shadow:
-                0 7px 25px rgba(0, 0, 0, 0.07);
+  overflow-wrap: break-word;
+  word-break: normal;
+}
 
-            transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease;
-        }
+/* Job Title */
+.experience-card h4 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #2563eb;
 
-        .experience-card:hover {
-            transform:
-                translateY(-8px);
+  overflow-wrap: break-word;
+}
 
-            box-shadow:
-                0 16px 38px rgba(0, 0, 0, 0.12);
-        }
+/* Experience Details */
+.experience-card p {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #475569;
 
-        .experience-header {
-            display: flex;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
 
-            justify-content: space-between;
+/* Date / Duration */
+.experience-card .date {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 12px;
 
-            align-items: flex-start;
+  background: #eff6ff;
+  color: #2563eb;
 
-            gap: 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
 
-            margin-bottom: 20px;
-        }
+/* Lists inside Experience Card */
+.experience-card ul {
+  margin: 15px 0 0;
+  padding-left: 22px;
+}
 
-        .experience-header h3 {
-            color: #111827;
+.experience-card li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #475569;
 
-            font-size: 21px;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
 
-            margin-bottom: 5px;
-        }
+/* Make bold text safe */
+.experience-card strong {
+  color: #0f172a;
+  font-weight: 600;
+}
 
-        .experience-header h4 {
-            color: #2563eb;
+/* =========================
+   MOBILE
+========================= */
 
-            font-weight: 600;
-        }
+@media (max-width: 768px) {
 
-        .experience-duration {
-            white-space: nowrap;
+  .experience-container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
 
-            font-size: 14px;
+  .experience-card {
+    padding: 25px 22px;
+    border-radius: 15px;
+  }
 
-            font-weight: 600;
+  .experience-card h3 {
+    font-size: 20px;
+  }
 
-            color: #6b7280;
-        }
+  .experience-card h4 {
+    font-size: 15px;
+  }
 
-        .experience-card ul {
-            padding-left: 20px;
-        }
+  .experience-card p,
+  .experience-card li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
 
-        .experience-card li {
-            margin-bottom: 10px;
+@media (max-width: 480px) {
 
-            color: #4b5563;
+  .experience-container {
+    padding: 0 10px;
+  }
 
-            line-height: 1.7;
-        }
+  .experience-card {
+    padding: 22px 18px;
+  }
 
+  .experience-card h3 {
+    font-size: 18px;
+  }
+
+  .experience-card h4 {
+    font-size: 14px;
+  }
+
+  .experience-card p,
+  .experience-card li {
+    font-size: 13.5px;
+  }
+}
 
         /* =========================================
            PROJECTS
