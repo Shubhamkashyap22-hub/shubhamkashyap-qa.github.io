@@ -507,7 +507,151 @@
         width: 100%;
     }
 
-}   
+}
+        /* =========================
+   HERO SECTION
+========================= */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.hero-greeting {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin: 0 0 10px;
+}
+
+.hero-content h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.hero-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #home {
+        padding: 60px 20px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content h2 {
+        font-size: 21px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        flex: none;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .hero-buttons,
+    .social-links {
+        justify-content: center;
+    }
+
+}
     </style>
 </head>
 
@@ -529,7 +673,7 @@
     </nav>
 
     <!-- Home -->
-   <section id="home">
+  <section id="home">
 
     <div class="hero-container">
 
@@ -571,7 +715,7 @@
 
             <div class="social-links">
 
-                <a href="YOUR_LINKEDIN_URL"
+                <a href="YOUR_REAL_LINKEDIN_URL"
                    target="_blank"
                    rel="noopener noreferrer">
                     LinkedIn
@@ -580,7 +724,6 @@
             </div>
 
         </div>
-
 
         <div class="hero-image">
 
@@ -592,7 +735,6 @@
     </div>
 
 </section>
-
     <!-- About -->
     <section class="about" id="about">
 
