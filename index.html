@@ -784,6 +784,140 @@
     transform: translateY(-3px);
     opacity: 0.9;
 }
+        /* =========================================
+   PROFESSIONAL WEBSITE ANIMATIONS
+========================================= */
+
+/* Hero Content Animation */
+.hero-content {
+    animation: heroContent 1s ease-out both;
+}
+
+/* Hero Image Animation */
+.hero-image {
+    animation: heroImage 1s ease-out 0.2s both;
+}
+
+/* Profile Image Floating Animation */
+.hero-image img {
+    animation: floatingImage 4s ease-in-out infinite;
+}
+
+
+/* Hero Buttons */
+.hero-buttons a,
+.social-links a {
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* Button Hover */
+.hero-buttons a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Social Link Hover */
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+
+/* Project / Skill / Experience / Education Cards */
+.skill-card,
+.project-card,
+.experience-card,
+.education-card,
+.contact-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Card Hover */
+.skill-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
+@keyframes heroContent {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes heroImage {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes floatingImage {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        animation-duration: 0.8s;
+    }
+
+    .hero-image {
+        animation-duration: 0.8s;
+    }
+
+    .hero-image img {
+        animation-duration: 4s;
+    }
+
+}
     </style>
 </head>
 
