@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shubhamkashyap22-hub.github.io/shubhamkashyap-qa.github.io/sitemap.xml
